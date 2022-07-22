@@ -5,16 +5,12 @@ import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.List;
-
 @Data
-@Document(collection = "users")
-public class User {
+@Document(collection = "sales")
+public class Sale {
 
     @Id
     private ObjectId id;
-    private String firstName;
-    private String lastName;
-    private double amountOfMoney;
-
+    private ObjectId productId;
+    private ObjectId userId;
 }
